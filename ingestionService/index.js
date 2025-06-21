@@ -1,9 +1,13 @@
 import { Kafka } from "kafkajs";
 import dotenv from "dotenv";
+import connectDB from './src/dataBase/mongo.js'
 
 dotenv.config();
 
-const kafka = new Kafka({
+const startApp =async  () =>{
+  await connectDB();
+
+  const kafka = new Kafka({
     clientId: 'gps-ingestor',
     brokers: [process.env.KAFKA_BROKER || 'localhost:9092'],
     retry: {
@@ -53,3 +57,8 @@ process.on('SIGINT', async () => {
 });
 
 run().catch(console.error);
+
+
+}
+
+startApp().catch(console.error);
