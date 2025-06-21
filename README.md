@@ -139,10 +139,10 @@ MIT License © Likhith B
 
 ## 🤝 Connect
 
-📧 Email: [likhithb@example.com](mailto:likhithb@example.com)
+📧 Email: [likhithb285@gmail.com](mailto:likhithb285@gmail.com)
 🌐 Portfolio: [likhithb.vercel.app](https://likhithb.vercel.app)
-🐙 GitHub: [@likhithb](https://github.com/likhithb)
-🔗 LinkedIn: [@likhithb](https://linkedin.com/in/likhithb)
+🐙 GitHub: [@likhithb08](https://github.com/likhithb08)
+🔗 LinkedIn: [@likhithb](https://linkedin.com/in/ikhith-b-1a7364242)
 
 ---
 
