@@ -33,3 +33,14 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
+  
+  mongodb:
+    image: mongo
+    container_name: smartfleet-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db  # <-- this MUST be a list item with '-'
+
+volumes:
+  mongo-data:
