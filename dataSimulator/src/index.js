@@ -15,11 +15,13 @@ const drivers = ['D1' , 'D2', 'D3']
 function generateRandomGPSData(driverId){
     const lat = (Math.random() * 180 - 90).toFixed(6)
     const lon = (Math.random() * 360 - 180).toFixed(6)
+    const speed = (Math.random() * 160)
     return {
         DriverId :driverId,
         lat,
         lon,
-        ts : Date.now()
+        ts : Date.now(),
+        speed
     }
 }
 async function run(){
