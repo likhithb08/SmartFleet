@@ -8,11 +8,18 @@ const kafka = new Kafka({
     brokers : [process.env.KAFKA_BROKER || 'localhost:9092'] 
 })
 
-const producer = kafka.producer()
-await  producer.connect()
+let producer
+
+const connectProducer= async()=>{
+    if(!producer){
+        producer = kafka.producer()
+        producer.connect()
+    }
+}
 
 const sendAnomoly = async (anomoly) =>{
     try{
+        await connectProducer()
         await producer.send({
             topic : 'anomoly-data',
             messages : [{value : JSON.stringify(anomoly)}]
